@@ -18,6 +18,27 @@
     "tags": ["production", "state-transfer", "serving"]
   },
   {
+    "id": "cursor-composer2-2026",
+    "title": "Composer 2 Technical Report",
+    "kind": "paper",
+    "canonicalUrl": "https://arxiv.org/abs/2603.24477",
+    "authors": ["Cursor Research"],
+    "publishedAt": "2026-03-25",
+    "summary": "Cursor's Composer 2 report is the freshest public example of a frontier async RL stack that makes weight synchronization an explicit systems component. The report describes per-step delta compression, sharded upload and download, background hotload signaling, and geographically distributed inference clusters reconstructing checkpoints from a shared delta chain.",
+    "whyRelevant": "This is the closest new public proof point for the exact operating model the Training team wants: disaggregated rollout inference, frequent policy updates, and no requirement for direct network connectivity between training and every rollout cluster. It makes the Modal/Tinker framing feel less speculative.",
+    "tags": ["cursor", "delta-compression", "multi-region"]
+  },
+  {
+    "id": "fireworks-frontier-training-2026",
+    "title": "Scaling and Optimizing Frontier Model Training",
+    "kind": "blog",
+    "canonicalUrl": "https://fireworks.ai/blog/scaling-optimizing-frontier-model-training",
+    "publishedAt": "2026-04-03",
+    "summary": "Fireworks frames the Composer 2 collaboration from the platform side: model catalog, parallelism stack, deployment bring-up, and RL workflows with separate policy and reference deployments. It is useful because it ties delta-compressed sync and rollout fleets to a concrete training product rather than a one-off lab stack.",
+    "whyRelevant": "For the Training team, this is the practical complement to the Cursor report. It suggests what a reusable platform surface for disaggregated RL could look like, which is much closer to the team's goal of a repeatable Modal example than a single impressive benchmark.",
+    "tags": ["fireworks", "platform", "rl"]
+  },
+  {
     "id": "pplx-weight-transfer-2025",
     "title": "Weight Transfer for RL Post-Training in under 2 seconds",
     "kind": "blog",
